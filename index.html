@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Estimate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>產出預估</h1>
+        <div class="input-group">
+            <label for="demand">需求數量 (pcs): </label>
+            <input type="number" id="demand" value="15000">
+        </div>
+        <div class="input-group">
+            <label for="K1">前段設置時間 (小時): </label>
+            <input type="number" id="K1" value="2">
+        </div>
+        <div class="input-group">
+            <label for="K2">後段打包時間 (小時): </label>
+            <input type="number" id="K2" value="4">
+        </div>
+        <div class="input-group">
+            <label for="config_uph">燒錄每小時產出 (UPH): </label>
+            <input type="number" id="config_uph" value="300">
+        </div>
+        <div class="input-group">
+            <label for="start_date">開始日期 (YYYY-MM-DD): </label>
+            <input type="date" id="start_date" value="2024-10-11">
+        </div>
+        <div class="input-group">
+            <label for="start_time">開始時間 (HH:MM): </label>
+            <input type="time" id="start_time" value="19:00">
+        </div>
+        <button id="calculate">計算預估出貨時間</button>
+        <pre id="result"></pre>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

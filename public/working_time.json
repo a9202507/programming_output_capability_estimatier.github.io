@@ -1,0 +1,17 @@
+{
+  "setting": {
+    "start_time": "09:00",
+    "end_time": "18:00",
+    "working_days": [0, 1, 2, 3, 4, 5, 6]
+  },
+  "production": {
+    "start_time": "00:00",
+    "end_time": "23:59",
+    "working_days": [0, 1, 2, 3, 4, 5, 6]
+  },
+  "packing": {
+    "start_time": "09:00",
+    "end_time": "18:00",
+    "working_days": [1, 2, 3, 4,5]
+  }
+}

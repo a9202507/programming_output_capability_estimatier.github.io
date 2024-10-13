@@ -169,3 +169,24 @@ document.getElementById("calculate").addEventListener("click", async () => {
     document.getElementById("result").textContent
   );
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Set default date to today
+  const today = new Date();
+  const formattedDate = today.toISOString().split("T")[0];
+  document.getElementById("start_date").value = formattedDate;
+});
+
+document.getElementById("calculate").addEventListener("click", async () => {
+  const demand = parseInt(document.getElementById("demand").value);
+  const K1 = parseFloat(document.getElementById("K1").value);
+  const K2 = parseFloat(document.getElementById("K2").value);
+  const configUpH = parseFloat(document.getElementById("config_uph").value);
+  const startDate = document.getElementById("start_date").value;
+  const startTime = document.getElementById("start_time").value;
+  const startDatetime = new Date(`${startDate}T${startTime}:00`);
+
+  console.log("開始時間: ", startDatetime);
+
+  // Rest of the code remains the same...
+});

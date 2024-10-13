@@ -107,10 +107,3 @@ document.getElementById('calculate').addEventListener('click', async () => {
     `;
 });
 
-function showDialog() {
-    document.getElementById('dialog').style.display = 'flex';
-}
-
-function closeDialog() {
-    document.getElementById('dialog').style.display = 'none';
-}

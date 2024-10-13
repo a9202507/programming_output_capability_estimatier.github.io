@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>產出預估</h1>
+        <div class="header">
+            <h1>產出預估</h1>
+            <div id="settings-icon" onclick="showDialog()">⋮</div>
+        </div>
         <div class="input-group">
             <label for="demand">需求數量 (pcs): </label>
             <input type="number" id="demand" value="15000">
@@ -26,16 +29,28 @@
             <input type="number" id="config_uph" value="300">
         </div>
         <div class="input-group">
-            <label for="start_date">客戶下單日期 (YYYY-MM-DD): </label>
+            <label for="start_date">開始日期 (YYYY-MM-DD): </label>
             <input type="date" id="start_date" value="2024-10-11">
         </div>
         <div class="input-group">
-            <label for="start_time">客戶下單時間 (HH:MM): </label>
+            <label for="start_time">開始時間 (HH:MM): </label>
             <input type="time" id="start_time" value="19:00">
         </div>
         <button id="calculate">計算預估出貨時間</button>
         <pre id="result"></pre>
     </div>
+
+    <!-- 說明對話框 -->
+    <div id="dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close" onclick="closeDialog()">&times;</span>
+            <h2>說明</h2>
+            <p>前段工作時間為一到日的日班</p>
+			<p>燒錄工作時間為24小時</p>
+			<p>後段工作時間為一到五的日班</p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

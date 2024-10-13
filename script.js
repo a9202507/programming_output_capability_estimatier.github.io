@@ -106,3 +106,11 @@ document.getElementById('calculate').addEventListener('click', async () => {
     預估出貨時間: ${timeFormat(times.shippingTime)}\n
     `;
 });
+
+function showDialog() {
+    document.getElementById('dialog').style.display = 'flex';
+}
+
+function closeDialog() {
+    document.getElementById('dialog').style.display = 'none';
+}

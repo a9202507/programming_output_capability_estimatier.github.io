@@ -7,7 +7,7 @@ document.getElementById("calculate").addEventListener("click", async () => {
   const startTime = document.getElementById("start_time").value;
   const startDatetime = new Date(`${startDate}T${startTime}:00`);
 
-  console.log("開始時間: ", startDatetime);
+  console.log("start time: ", startDatetime);
 
   let workingTime;
   try {
@@ -140,27 +140,29 @@ document.getElementById("calculate").addEventListener("click", async () => {
     });
 
   document.getElementById("result").textContent = `
-    前段設置開始時間: ${timeFormat(times.settingStart)}
-    前段設置結束時間: ${timeFormat(times.settingEnd)}
-    前段設置總共花費: ${(
+    front-end start: ${timeFormat(times.settingStart)}
+    front-end end: ${timeFormat(times.settingEnd)}
+    fornt-end total: ${(
       (times.settingEnd - times.settingStart) /
       3600 /
       1000
-    ).toFixed(2)} 小時
-    燒錄開始時間: ${timeFormat(times.productionStart)}
-    燒錄結束時間: ${timeFormat(times.productionEnd)}
-    燒錄總共花費: ${times.actualProductionTime.toFixed(2)} 小時
-    後段打包開始時間: ${timeFormat(times.packingStart)}
-    後段打包結束時間: ${timeFormat(times.packingEnd)}
-    後段打包總共花費: ${(
+    ).toFixed(2)} hours
+    programming start: ${timeFormat(times.productionStart)}
+    programming end: ${timeFormat(times.productionEnd)}
+    total programming time: ${times.actualProductionTime.toFixed(2)} hours
+    back-end start: ${timeFormat(times.packingStart)}
+    back-end end: ${timeFormat(times.packingEnd)}
+    total back-end time: ${(
       (times.packingEnd - times.packingStart) /
       3600 /
       1000
-    ).toFixed(2)} 小時
-    預估出貨時間: ${timeFormat(times.shippingTime)}
-    總耗時: ${((times.shippingTime - times.settingStart) / 3600 / 1000).toFixed(
-      2
-    )} 小時
+    ).toFixed(2)} hours
+    Shipping estimation time: ${timeFormat(times.shippingTime)}
+    Order to shipping time: ${(
+      (times.shippingTime - times.settingStart) /
+      3600 /
+      1000
+    ).toFixed(2)} hours
     `;
 
   console.log("詳細時間信息：", times);
